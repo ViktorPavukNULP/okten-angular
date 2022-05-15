@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -11,9 +11,10 @@ export class PostService {
 
   url = 'http://jsonplaceholder.typicode.com/posts';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
-  getPosts() : Observable<PostInterface[]>{
+  getPosts(): Observable<PostInterface[]> {
     return this.http
       .get<PostInterface[]>(`${this.url}?_limit=7`)
   }

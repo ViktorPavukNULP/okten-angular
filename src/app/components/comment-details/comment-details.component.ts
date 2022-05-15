@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {CommentDetailsInterface} from "../../models/сomment-details.interface";
@@ -13,8 +13,9 @@ export class CommentDetailsComponent implements OnInit {
 
   commentDetailsObj: CommentDetailsInterface;
 
-  constructor(private activatedRoute:ActivatedRoute,
-              private commentService:CommentService) { }
+  constructor(private activatedRoute: ActivatedRoute,
+              private commentService: CommentService) {
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(({id}) => {

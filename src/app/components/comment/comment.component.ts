@@ -12,7 +12,8 @@ export class CommentComponent implements OnInit {
   @Input()
   comment: CommentInterface;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

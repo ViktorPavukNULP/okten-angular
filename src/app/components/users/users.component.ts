@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 import {UserInterface} from "../../models/user.interface";
 import {UserService} from "../../services/user.service";
 
@@ -11,7 +12,7 @@ export class UsersComponent implements OnInit {
 
   users: UserInterface[];
 
-  constructor(private userService:UserService) {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit(): void {

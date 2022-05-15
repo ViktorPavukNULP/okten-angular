@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+
 import {PostDetailsInterface} from "../../models/post-details.interface";
 
 @Component({
@@ -11,13 +12,14 @@ export class PostDetailsComponent implements OnInit {
 
   postDetailsObj: PostDetailsInterface;
 
-  constructor(private activatedRoute:ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute) {
+  }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(value => {
       let {state: {data}} = history;
       this.postDetailsObj = data as PostDetailsInterface;
-      })
+    })
   }
 
 }

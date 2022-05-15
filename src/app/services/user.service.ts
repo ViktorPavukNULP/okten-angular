@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
@@ -11,10 +11,10 @@ export class UserService {
 
   url = 'http://jsonplaceholder.typicode.com/users';
 
-  constructor(private http:HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
-  getUsers(): Observable<UserInterface[]>{
+  getUsers(): Observable<UserInterface[]> {
     return this.http
       .get<UserInterface[]>(this.url)
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 
 import {UserDetailsInterface} from "../../models/user-details.interface";
@@ -10,7 +10,7 @@ import {UserDetailsInterface} from "../../models/user-details.interface";
 })
 export class UserDetailsComponent implements OnInit {
 
-   userDetailsObj: UserDetailsInterface;
+  userDetailsObj: UserDetailsInterface;
 
   constructor(private activatedRoute: ActivatedRoute) {
 
