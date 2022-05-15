@@ -33,6 +33,7 @@ import { CommentDetailsComponent } from './components/comment-details/comment-de
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
+      {path: '', redirectTo: 'homepage', pathMatch: 'full'},
       {path: 'homepage', component: HomeComponent},
       {
         path: 'users', component: UsersComponent,
