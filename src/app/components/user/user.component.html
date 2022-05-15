@@ -1,1 +1,3 @@
-<div class="user">{{user.id}}. - {{user.name}}</div>
+<div class="user">{{user.id}}. - {{user.name}}
+  <a [routerLink]="[user.id]" [state]="{data:user}">Details</a>
+</div>

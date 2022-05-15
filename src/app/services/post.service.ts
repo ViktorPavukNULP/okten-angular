@@ -9,13 +9,13 @@ import {PostInterface} from "../models/post.interface";
 })
 export class PostService {
 
-  url = 'http://jsonplaceholder.typicode.com/posts?_limit=5';
+  url = 'http://jsonplaceholder.typicode.com/posts';
 
   constructor(private http:HttpClient) { }
 
   getPosts() : Observable<PostInterface[]>{
     return this.http
-      .get<PostInterface[]>(this.url)
+      .get<PostInterface[]>(`${this.url}?_limit=7`)
   }
 
 }
