@@ -3,7 +3,6 @@ import {ActivatedRoute, Router} from "@angular/router";
 
 import {IPost} from "../../../../models/IPost";
 import {PostService} from "../../posts-services/post.service";
-import {IUser} from "../../../../models/IUser";
 
 @Component({
   selector: 'app-post-details',
@@ -14,7 +13,7 @@ export class PostDetailsComponent implements OnInit {
 
   post: IPost;
 
-  constructor(private activatedRoute: ActivatedRoute, private router:Router, private postService:PostService) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private postService: PostService) {
   }
 
   ngOnInit(): void {
@@ -24,7 +23,7 @@ export class PostDetailsComponent implements OnInit {
       if (state) {
         this.post = state
       } else {
-        this.postService.getById(id).subscribe(value => this.post = value)
+        this.activatedRoute.data.subscribe(({postData}) => this.post = postData)
       }
     })
   }
