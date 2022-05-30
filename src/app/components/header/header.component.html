@@ -6,6 +6,6 @@
     <a routerLink="register">REGISTER</a>
   </div>
   <div class="logout">
-    <a href="#">Logout</a>
+    <a href="/login" *ngIf="loggedIn" (click)="logout()">Logout</a>
   </div>
 </div>
