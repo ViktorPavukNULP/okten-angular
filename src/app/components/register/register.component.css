@@ -1,7 +1,7 @@
-form div{
+form div, button {
   margin: 10px;
 }
 
-.error{
+.error {
   color: red;
 }
