@@ -1,1 +1,7 @@
-<p>register works!</p>
+<form [formGroup]="form">
+  <div><label>username: <input type="text" formControlName="username"></label></div>
+  <span class="error" *ngIf="userNameError">{{userNameError}}</span>
+  <div><label>password: <input type="text" formControlName="password"></label></div>
+  <div><label>confirmPassword: <input type="text" formControlName="confirmPassword"></label></div>
+  <button (click)="register()">Register</button>
+</form>

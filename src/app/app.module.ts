@@ -10,6 +10,8 @@ import { CarComponent } from './components/car/car.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 import {RouterModule} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import {AppRoutingModule} from "./app-routing.module";
     CarComponent,
     MainLayoutComponent
   ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    AppRoutingModule,
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
