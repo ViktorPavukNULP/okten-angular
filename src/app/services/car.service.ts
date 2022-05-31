@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
-import {ICar} from "../interfaces/car";
+import {ICar} from "../interfaces/car.interface";
 import {Observable} from "rxjs";
 import {urls} from "../constants/urls";
 
@@ -18,14 +18,13 @@ export class CarService {
   getAll(): Observable<ICar[]> {
     return this.httpClient.get<ICar[]>(urls.cars);
   }
-  getById(id:string): Observable<ICar> {
+  getById(id:number): Observable<ICar> {
     return this.httpClient.get<ICar>(`${urls.cars}/${id}`);
   }
-  deleteById(id:string): Observable<void> {
-    console.log(`${urls.cars}/${id}`);
+  deleteById(id:number): Observable<void> {
     return this.httpClient.delete<void>(`${urls.cars}/${id}`);
   }
-  update(id:string, carForUpdate:Partial<ICar>): Observable<ICar> {
+  update(id:number, carForUpdate:Partial<ICar>): Observable<ICar> {
     return this.httpClient.put<ICar>(`${urls.cars}/${id}`, carForUpdate);
   }
 }

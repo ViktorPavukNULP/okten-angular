@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ICar} from "../../interfaces/car";
+import {ICar} from "../../interfaces/car.interface";
 import {CarService} from "../../services/car.service";
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -31,4 +31,5 @@ export class CarsComponent implements OnInit {
   create() {
     this.carService.create(this.form.value).subscribe(value => this.cars.push(value));
   }
+
 }
