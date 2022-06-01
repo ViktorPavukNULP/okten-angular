@@ -20,6 +20,8 @@ export class CarComponent implements OnInit {
 
     delete(id: number): void {
     this.carService.deleteById(id).subscribe( () => {
+      // this.cars = this.cars.filter(car => car.id !== id);
+      // console.log(this.cars);
       const index = this.cars.findIndex(car => car.id === id);
       this.cars.splice(index, 1)
     });
